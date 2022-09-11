@@ -11,7 +11,8 @@ module.exports = {
       name: 'products',
       filename: 'remoteEntry.js',
       exposes: {
-        './ProductsIndex': './src/index.js',
+        // mount funtion을 가져오려면 직접 bootstrap.js를 지정
+        './ProductsIndex': './src/bootstrap.js',
       },
       shared: ['faker']
     }),
