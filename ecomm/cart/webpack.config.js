@@ -14,6 +14,11 @@ module.exports = {
                 './CartShow' : './src/index'
             },
             shared: ['faker']
+            //     faker : {
+            //         //Singleton true means that we only want to load up one single copy of Fakher no matter what.
+            //         singleton: true
+            //     }
+            // }
         }),
         new HtmlWebpackPlugin ({
             template : './public/index.html'
