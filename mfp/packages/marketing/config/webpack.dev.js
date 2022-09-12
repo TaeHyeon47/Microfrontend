@@ -2,6 +2,7 @@
 // that common.js file and merge it together with a configuration that we're about to write inside this development.
 //? merge는 webpack.common.js와 webpack.dev.js의 config를 통합해준다.
 const { merge } = require('webpack-merge');
+const commonConfig = require('./webpack.common');
 
 // HtmlWebpackPlugin ake some kind of HTML file inside of our project and inject a couple
 // of different script tags inside of it.
@@ -21,3 +22,5 @@ const devConfig = {
     }),
   ],
 };
+
+module.exports = merge(commonConfig, devConfig);
