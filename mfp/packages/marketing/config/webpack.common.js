@@ -1,6 +1,6 @@
-module.export = {
+module.exports = {
   module: {
-    reles: [
+    rules: [
       {
         // whenever we import in a file that ends with an extension of either in.js or just js
         // we want it to be processed by Bable
@@ -24,3 +24,21 @@ module.export = {
     ],
   },
 };
+
+// module.exports = {
+//   module: {
+//     rules: [
+//       {
+//         test: /\.m?js$/,
+//         exclude: /node_modules/,
+//         use: {
+//           loader: 'babel-loader',
+//           options: {
+//             presets: ['@babel/preset-react', '@babel/preset-env'],
+//             plugins: ['@babel/plugin-transform-runtime'],
+//           },
+//         },
+//       },
+//     ],
+//   },
+// };
